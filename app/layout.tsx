@@ -39,7 +39,8 @@ export default function RootLayout({
         <Script id="marker-config">
           {`
             window.MarkerConfig = {
-              destination: POR-1
+              // destination: "POR-1"
+              project: "POR-1"
             };
           `}
         </Script>
