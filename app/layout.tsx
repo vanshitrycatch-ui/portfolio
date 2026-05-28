@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Space_Grotesk } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -33,6 +34,21 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} antialiased bg-background text-foreground`}
       >
         {children}
+
+        {/* Marker.io Config */}
+        <Script id="marker-config">
+          {`
+            window.MarkerConfig = {
+              destination: POR-1
+            };
+          `}
+        </Script>
+
+        {/* Marker.io Script */}
+        <Script
+          src="https://edge.marker.io/latest/shim.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
