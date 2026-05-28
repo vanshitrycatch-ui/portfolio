@@ -40,7 +40,7 @@ export default function RootLayout({
           {`
             window.MarkerConfig = {
               // destination: "POR-1"
-              project: "POR-1"
+             project: '6a18089b15ec6c6cf18dd125', 
             };
           `}
         </Script>
